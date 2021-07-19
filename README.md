@@ -8,3 +8,10 @@ Github repository for CMP 168: Programming Methods II in Summer 2021.
 - **Eclipse IDE**: [Link](https://www.eclipse.org/downloads/packages/release/2021-06/r/eclipse-ide-java-developers)
 - **Java JDK 8**: [Link](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 - **Java 8 Documentation**: [Link](https://docs.oracle.com/javase/8/docs/api/)
+
+**Important Dates**
+- Midterm exam: Monday, August 2nd.
+- Midterm project due: Tuesday, August 3rd.
+- Final exam: Thursday, August 12th.
+- Final project due: Sunday, August 15th.
+
