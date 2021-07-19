@@ -112,6 +112,14 @@ int myInt = (int)myDouble; // What value does myInt receive?
 ```
 **Exercise**: c2.12.2 Computing average kids per family.
 
+**Solution**:
+```java
+// avgKids = (double)((numKidsA + numKidsB + numKidsC) / numFamilies); // This doesn't work!!
+avgKids = (double)(numKidsA + numKidsB + numKidsC) / numFamilies; // works due to the implicit conversion!
+avgKids = (numKidsA + numKidsB + numKidsC) / (double)numFamilies; // works due to the implicit conversion!
+avgKids = (double)(numKidsA + numKidsB + numKidsC) / (double)numFamilies; // works!
+```
+
 ### Strings
 A **string** is a sequence of characters.
 - A string literal surrounds a character sequence with double quotes, as in `"Hello"` or `"52 Main St"`.
