@@ -73,7 +73,7 @@ A name created by a programmer for an item like a variable or method is called a
 - `()`
 - **Modulo operator `%`**: checking divisibility, even/odd.
 - **Compound operators `+=, -=, *=, /=`**
-- **`i++`**
+- **Increment operator `i++` and decrement operator `i--`**
 - `int` vs. `double`
 - Division by zero
 - Format floating-point numbers: `System.out.printf("%.2f", myFloat); ` **Watch p2.7.5 Reducing the output of pi**.
