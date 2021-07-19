@@ -1,5 +1,5 @@
 # Week 1 Day 1
-# Introduction and Review of Chapter 2 - 5
+# Introduction and Review of Chapter 1 - 4
 
 ## Course Introduction
 - [Syllabus](https://github.com/ch00226855/CMP168Summer2021/blob/main/CMP326%20Syllabus.pdf)
@@ -104,3 +104,59 @@ A **type cast** explicitly converts a value of one type to another type.
 double myDouble = 5.2;
 int myInt = (int)myDouble; // What value does myInt receive?
 ```
+**Exercise**: c2.12.2 Computing average kids per family.
+
+### Strings
+A **string** is a sequence of characters.
+- A string literal surrounds a character sequence with double quotes, as in `"Hello"` or `"52 Main St"`.
+- Programmers use the **String data type** to store strings, such as `String movieTitle = "The Martian";`
+- Read a string from input: 
+  - `scnr.next()`: get a string without whitespaces
+  - `scnr.nextLine()`: get all characters until a newline symbol
+
+**Exercise**: c2.15.1 Reading and outputting strings.
+
+## Chapter 3 Input / Output
+
+### Output Formatting
+A programmer can adjust the way the output appears, known as **output formatting**. This can be done with `System.out.printf()` or `String.format()`.
+
+Example:
+```java
+String account = "Prime";
+double total = 210.35;
+int years = 5;
+
+System.out.printf("The %s account saved you $%f over %d years\n",
+    account, total, years);
+```
+
+- The first argument is a **format string** that contains serveral **format specifiers**.
+- A format specifier specifies the type of value to print in its place. It begins with `%`.
+  - `%d`: integer
+  - `%f`: floating-point number
+  - `%s`: string
+- Read Table 3.2.2 Floating-point formatting, Table 3.2.3 Integer formatting, Table 3.2.4 String formatting
+
+**Exercise**: 3.2.2 Printing a maximum number of decimals.
+
+## Chapter 4 Decision Branches
+A **branch** is a sequence of statements only executed under a certain condition.
+- If branch Example: p4.1.5 Computing absolute value
+- If-else branch example: p4.1.9 Computing the max
+- Multiple if-else branches: p4.1.11 Anniversaries
+
+### Equality and Inequality Operators
+- Equality: `==`
+- Inequality: `!=`
+- Relational operators: `>, <, >=, <=`
+- Floating-point types should **not** be compared using `==` due to their imprecise presentations.
+- String types should **not** be compared using `==`. Instead, use its `equals()` and `compareTo()` methods.
+
+### Logical Operators
+- And: `&&`
+- Or: `||`
+- Not: `!`
+**Example**: p4.5.1 Logical operators
+
+**Exercise**: c4.5.1 Detect number range.
