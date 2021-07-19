@@ -40,13 +40,15 @@ x = x * 2;  // x is now 40
 
 **Exercise**: c2.2.4 Adding a number to a variable
 
+**Solution**: `numPeople = numPeople + 5;`
+
 **Common errors**:
 - Read a variable that has not yet been assigned a value.
 - Write an assignment statement in reverse, such as `numKids + numAdults = numPeople` or `9 = beansCount`.
 
 ### Input / Output Basics
 
-- Print: `System.out.print()` and `System.out.println()`.
+- Print: `System.out.print()`(does not create a new line) and `System.out.println()` (creates a new line in the end).
 - Read user input with `Scanner`. Example:
 ```java
 import java.util.Scanner; // import Scanner class from java.util package
@@ -62,6 +64,8 @@ A name created by a programmer for an item like a variable or method is called a
 2. not start with a digit;
 3. not be a **reserved word** such as `int` or `public`.
 
+**Invalid identifers:** `2ndGrade`, `my name`, `Great!`, `static`.
+
 - Identifiers are case sensitive.
 - Java's naming convention for variables is **camel casing**, like `numApples` or `peopleOnBus`.
 - A good practice is to create meaning ful identifier names that descirbes the variable's purpose.
@@ -71,7 +75,9 @@ A name created by a programmer for an item like a variable or method is called a
 ### Arithmetic Expressions
 - `+, -, *, /`
 - `()`
-- **Modulo operator `%`**: checking divisibility, even/odd.
+- **Modulo operator `%`**: 
+  - checking divisibility: `x % 4` checks if x is divisible by 4.
+  - even/odd: `x % 2` returns 1 if x is odd, returns 0 if x is even.
 - **Compound operators `+=, -=, *=, /=`**
 - **Increment operator `i++` and decrement operator `i--`**
 - `int` vs. `double`
@@ -84,7 +90,7 @@ A name created by a programmer for an item like a variable or method is called a
 
 ### Math Methods
 - A **method** is a list of statements executed by invoking the method's name. Such action is known as a **method call**. 
-- Useful math methods: `Math.sqrt()`, `Math.pow()`, `Math.pow()`, `Math.random()`.
+- Useful math methods: `Math.sqrt()`, `Math.pow()`, `Math.abs()`, `Math.random()`.
 - Input values (called **arguments**) appear within `()`. 
 **Exercise**: 2.10.3 Distance between two points.
 
