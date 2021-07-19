@@ -154,6 +154,8 @@ System.out.printf("The %s account saved you $%f over %d years\n",
 
 **Exercise**: 3.2.2 Printing a maximum number of decimals.
 
+**Solution:** `System.out.printf("%.2f\n", outsideTemperature);`
+
 ## Chapter 4 Decision Branches
 A **branch** is a sequence of statements only executed under a certain condition.
 - If branch Example: p4.1.5 Computing absolute value
