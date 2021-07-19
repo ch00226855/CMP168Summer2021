@@ -1,5 +1,5 @@
 # Week 1 Day 1
-# Introduction and Review of Chapter 1 - 4
+# Introduction and Review of Chapter 1 - 5
 
 ## Course Introduction
 - [Syllabus](https://github.com/ch00226855/CMP168Summer2021/blob/main/CMP326%20Syllabus.pdf)
@@ -160,3 +160,44 @@ A **branch** is a sequence of statements only executed under a certain condition
 **Example**: p4.5.1 Logical operators
 
 **Exercise**: c4.5.1 Detect number range.
+
+## Chapter 5 Loops
+A **loop** is a program structure that repeated executes the loop's statement (**loop body**) while the loop's expression is true.
+
+**Example**: p5.1.4 Computing an average
+
+### While Loop
+
+```java
+while(expression){
+  // loop body
+}
+```
+
+**Example**: p5.2.1 While loop.
+
+### For Loop
+
+```java
+for (initialExpression; condition; updateExpression) {
+  // loop body
+}
+```
+**Example**: p5.4.1 For loop.
+
+### Do-While Loops
+
+```java
+do {
+  // loop body
+} while (condition);
+```
+
+### Break and Continue
+
+- A **break statement** in a loop causes an immediate exit of the loop. 
+- A **continue statement** in a loop causes an immediate jump to the loop condition check.
+
+A break statement or continue statement can sometimes yield a loop that is easier to understand.
+
+## Homework 1: 5.15 - 5.18
