@@ -83,7 +83,7 @@ public class ListAverage {
          currValue = scnr.nextInt();
       }
 
-      System.out.println("Average: " + (valuesSum / numValues));
+      System.out.println("Average: " + ((double)valuesSum / numValues));
    }
 }
 ```
