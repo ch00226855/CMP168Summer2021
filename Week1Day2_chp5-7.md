@@ -360,3 +360,75 @@ public class DatePrinter {
 ```
 
 **Exercise**: p6.10.1 Method name overloading
+
+## Chapter 7 Arrays
+
+An **array** is a special variable having one name, but storing a list of data items, with each item being directly accessible. In java, an array is an ordered list of items of a given data type. Each item in an array is called an **element**.
+
+### Array Declaration
+```java
+dataType[] arrayName = new dataType[numElements];
+```
+- The **\[ \]**(brackets) symbol after the data type indicates that the variable is an array reference.
+- The **new** keyword creates space in memory to store the array with the specific number of elements. 
+
+**Separate array declaration and array allocation**
+A programmer can declare an array reference variable without allocating the array at that time and later assign the variable with an allocated array.
+
+```java
+int[] gameScores;
+...
+gameScores = new int[4];
+```
+
+**Exercise**: p7.2.3 Array basics
+
+### Iterating Through Arrays
+
+```java
+for (i = 0; i < myArray.length; i++) {
+   // Loop body accessing myArray[i]
+}
+```
+**Exercise**: c7.4.5 Printing array elements separated by commas
+
+### Modifying an Array with a Loop
+A program may need to modify elements while iterating through an array.
+
+**Exercise**: c7.7.1 Decrement array elements
+
+**Exercise**: c7.7.2 Copy and modify array elements
+
+### Array Parameters
+
+Passing an array to a method is an example of passing a reference type variable rather than a primitive type variable
+
+**Passing a primitive type variable to a method**
+- Example: `int`, `double`, `boolean`, `char`
+- A copy of the variable is passed to the method.
+- Modifying the variable inside the method **does not** affect the original variable.
+- The copy is removed from computer memory after the method call.
+
+**Passing a reference type variable to a method**
+- Example: `String`, `Scanner`, arrays
+- A copy of the reference (address) is passed to the method. 
+- Modifying the variable inside the method **does** affect the original variable.
+
+**Example**: A method that swaps the first and last element of its array parameter.
+
+### Oversized Arrays
+
+An oversize array is an array where the number of elements used is less than or equal to the memory allocated. Since the number of elements used in an oversize array is usually less than the array's length, **a separate integer variable is used to keep track of how many array elements are currently used**. Oversize arrays are useful when the number of elements stored in the array is not known in advance, or when the number of elements stored in an array varies over time.
+
+**Format**:
+```java
+int[] salesTransactions = new int[1000];
+int salesTransactionsSize = 0;
+```
+
+**Example**: Add an element to an oversized array
+
+Write a `addElement()` method that adds a new string to the end of an array of strings.
+- The method should first check if there is room for the extra element.
+- If the array is already full, create a new array of twice the size and copy all existing elements to it.
+- The method should return the new array and the updated size.
