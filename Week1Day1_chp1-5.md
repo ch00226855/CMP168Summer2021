@@ -173,6 +173,7 @@ A **branch** is a sequence of statements only executed under a certain condition
 - And: `&&`
 - Or: `||`
 - Not: `!`
+
 **Example**: p4.5.1 Logical operators
 
 **Exercise**: c4.5.1 Detect number range.
@@ -215,5 +216,3 @@ do {
 - A **continue statement** in a loop causes an immediate jump to the loop condition check.
 
 A break statement or continue statement can sometimes yield a loop that is easier to understand.
-
-## Homework 1: 5.15 - 5.18
