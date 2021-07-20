@@ -103,7 +103,7 @@ Generally, a programmer uses a for loop when the number of iterations is known (
 for (int i = 0; i < N; i++) {
   \\ loop body
 }
-
+```
 **Exercise**: p5.4.2, p5.4.3 For loops
 
 **Computing the average of a list of input values**
