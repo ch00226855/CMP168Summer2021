@@ -1,7 +1,7 @@
 # Week 1 Day 2
 # Review of Chapter 5 - 7
 
-## Chapter 5 Loops
+## Review of Chapter 5 Loops
 
 ### While Loop Examples
 
@@ -105,34 +105,6 @@ for (int i = 0; i < N; i++) {
 }
 ```
 **Exercise**: p5.4.2, p5.4.3 For loops
-
-**Computing the average of a list of input values**
-```java
-
-import java.util.Scanner;
-
-public class ListAverage {
-   public static void main(String [] args) {
-      Scanner scnr = new Scanner(System.in);
-      int currValue;
-      int valuesSum;
-      int numValues;
-      int i;
-      
-      numValues = scnr.nextInt(); // Gets number of values in list
-      
-      valuesSum = 0;
-      
-      for (i = 0; i < numValues; ++i) {
-         currValue = scnr.nextInt(); // Gets next value in list
-         valuesSum += currValue;
-      }
-      
-      System.out.println("Average: " + (valuesSum / numValues));
-   }
-}
-```
-**Exercise**: p5.4.5
 
 **Finding the max**
 
@@ -361,7 +333,7 @@ public class DatePrinter {
 
 **Exercise**: p6.10.1 Method name overloading
 
-## Chapter 7 Arrays
+## Review of Chapter 7 Arrays
 
 An **array** is a special variable having one name, but storing a list of data items, with each item being directly accessible. In java, an array is an ordered list of items of a given data type. Each item in an array is called an **element**.
 
