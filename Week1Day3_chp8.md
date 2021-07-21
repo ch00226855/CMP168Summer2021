@@ -131,6 +131,13 @@ public CarRecord() {
 - c8.8.2: Unit testing of a class
 - c8.9.2: Constructor overloading
 
+**Solution**
+```java
+public PhonePlan(int numMinutes, int numMessages) {
+   freeMinutes = numMinutes;
+   freeMessages = numMessages;
+}
+```
 ### Keyword `this`
 
 Within an instance method or a constructor, this refers to the current object (the object whose method or constructor is being called). It is helpful to make the program easier to understand.
