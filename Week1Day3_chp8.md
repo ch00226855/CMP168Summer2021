@@ -104,12 +104,13 @@ It is a _good practice_ to use public getter methods to access an object's data.
 
 **Exercises**:
 - c8.3.2: Basic class use
- **Solution**:
- ```java
-       System.out.println("Kids: " + person1.getNumKids());
-      person1.incNumKids();
-      System.out.println("New baby, kids now: " + person1.getNumKids());
-      ```
+
+**Solution**:
+```java
+ System.out.println("Kids: " + person1.getNumKids());
+ person1.incNumKids();
+ System.out.println("New baby, kids now: " + person1.getNumKids());
+ ```
 - c8.3.3: Basic class definition
 - c8.5.1: Basic constructor definition
 - c8.8.2: Unit testing of a class
