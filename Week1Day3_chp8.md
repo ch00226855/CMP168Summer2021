@@ -138,3 +138,34 @@ A **static variable** is a varable shared among all class objects. The keyword `
 - Add static methods `updateNumRestaurants()` and `getNumRestaurants()` to the `Restaurant` class.
 
 **Exercise**: c8.16.1: A class with static members
+
+### Unified Modeling Language (UML)
+
+**Unified Modeling Language (UML)** is a language used to define class models and specify the details of use cases.
+
+Restaurant
+___
+\- restaurantName: String
+
+\- restaurantRating: int
+
+\+ Restaurant()
+
+\+ Restaurant(String, int)
+
+\+ setName(String): void
+
+\+ setRating(int): void
+
+\+ getName(): String
+
+\+ getRating(): int
+
+\+ printInfo(): void
+
+**Access modifiers in UML:**
+- `-`: private
+- `+`: public
+- `#`: protected
+- `UPPER_CASE_UNDERSCORED`: final variable
+- <ins>underlined</ins>: static variable or method
