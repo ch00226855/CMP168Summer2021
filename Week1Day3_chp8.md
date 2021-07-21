@@ -63,6 +63,10 @@ public void printInfo() {
 ```
 - Create additional private helper methods
 ```java
+private boolean isRatingValid(int rating) {
+  return (rating >= 0) && (rating <= 5);
+}
+
 private String starRating(int rating) {
   String output = "";
   for (int i = 0; i < rating; i++) {
@@ -71,3 +75,55 @@ private String starRating(int rating) {
   return output;
 }
 ```
+
+### Create Objects
+
+A programmer can create one or more objects of the same class:
+```java
+Restaurant favBreakfastPlace = new Restaurant("Brooklyn Deli", 4.5);
+Restaurant favLunchPlace = new Restaurant("Chipotle", 4.9);
+Restaurant favDinnerPlace = new Restaurant();
+```
+- Declare the object's name and class type
+- Include the `new` operator so that memory space will be allocated.
+- Call a constructor to create the object.
+
+### Modify an Object's Data
+
+It is a _good practice_ to use public setter methods to modify an object. In this way the programmer doesn't need to worry about how the information is handled internally.
+
+- Change `favLunchPlace`'s name to Popeyes.
+- Change `favDinnerPlace`'s name and rating to Outback Steakhouse and 5.
+
+### Access an Object's Data
+
+It is a _good practice_ to use public getter methods to access an object's data.
+
+- Print the rating of `favBreakfastPlace`
+- Find the highest rated restaurant
+
+### Keyword `this`
+
+Within an instance method or a constructor, this refers to the current object (the object whose method or constructor is being called). It is helpful to make the program easier to understand.
+- Use `this` in a constructor
+- Use `this` in getter/setter methods
+- Use `this` in other methods
+
+### The `Object` Class
+The `Object` class is the base class for all other classes. It allows every class to have some basic functionality, including:
+- `toString`: returns the object's class and hexadecimal address in memory
+- `equals()`: determines if two variable refer to the same object.
+
+Programmers can *override* these methods so that it can perform its task differently.
+
+- Override the `toString()` method of `Restaurant` so that the string contains the name and rating in a nice format.
+- Override the `equals()` method of `Restaurant` so that two Restaurant objects are the same as long as they have the same name.
+
+`@Override` is an optional annotation to indicate that this method overrides in its parent class. 
+
+### Static Variable / Method
+
+A **static variable** is a varable shared among all class objects. The keyword `static` is used when declaring such a variable. It will be accessed using the class name instead of an object's name.
+
+- Add a static variable `numRestaurants` to the `Restaurant` class.
+- Add static methods `updateNumRestaurants()` and `getNumRestaurants()` to the `Restaurant` class.
