@@ -120,6 +120,14 @@ public void createLicenseNum(int userID) {
 }
 ```
 - c8.5.1: Basic constructor definition
+
+**Solution**
+```java
+public CarRecord() {
+   yearMade = 0;
+   vehicleIdNum = -1;
+}
+```
 - c8.8.2: Unit testing of a class
 - c8.9.2: Constructor overloading
 
