@@ -112,6 +112,13 @@ It is a _good practice_ to use public getter methods to access an object's data.
  System.out.println("New baby, kids now: " + person1.getNumKids());
  ```
 - c8.3.3: Basic class definition
+
+**Solution**
+```java
+public void createLicenseNum(int userID) {
+   licenseNum = (100000 * userID) + licenseYear;  
+}
+```
 - c8.5.1: Basic constructor definition
 - c8.8.2: Unit testing of a class
 - c8.9.2: Constructor overloading
