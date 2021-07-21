@@ -102,12 +102,21 @@ It is a _good practice_ to use public getter methods to access an object's data.
 - Print the rating of `favBreakfastPlace`
 - Find the highest rated restaurant
 
+**Exercises**:
+- c8.3.2: Basic class use
+- c8.3.3: Basic class definition
+- c8.5.1: Basic constructor definition
+- c8.8.2: Unit testing of a class
+- c8.9.2: Constructor overloading
+
 ### Keyword `this`
 
 Within an instance method or a constructor, this refers to the current object (the object whose method or constructor is being called). It is helpful to make the program easier to understand.
 - Use `this` in a constructor
 - Use `this` in getter/setter methods
 - Use `this` in other methods
+
+**Exercise**: c8.11.1: The this implicit parameter
 
 ### The `Object` Class
 The `Object` class is the base class for all other classes. It allows every class to have some basic functionality, including:
@@ -127,3 +136,5 @@ A **static variable** is a varable shared among all class objects. The keyword `
 
 - Add a static variable `numRestaurants` to the `Restaurant` class.
 - Add static methods `updateNumRestaurants()` and `getNumRestaurants()` to the `Restaurant` class.
+
+**Exercise**: c8.16.1: A class with static members
