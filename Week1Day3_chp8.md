@@ -147,18 +147,6 @@ Within an instance method or a constructor, this refers to the current object (t
 
 **Exercise**: c8.11.1: The this implicit parameter
 
-### The `Object` Class
-The `Object` class is the base class for all other classes. It allows every class to have some basic functionality, including:
-- `toString`: returns the object's class and hexadecimal address in memory
-- `equals()`: determines if two variable refer to the same object.
-
-Programmers can *override* these methods so that it can perform its task differently.
-
-- Override the `toString()` method of `Restaurant` so that the string contains the name and rating in a nice format.
-- Override the `equals()` method of `Restaurant` so that two Restaurant objects are the same as long as they have the same name.
-
-`@Override` is an optional annotation to indicate that this method overrides in its parent class. 
-
 ### Static Variable / Method
 
 A **static variable** is a varable shared among all class objects. The keyword `static` is used when declaring such a variable. It will be accessed using the class name instead of an object's name.
