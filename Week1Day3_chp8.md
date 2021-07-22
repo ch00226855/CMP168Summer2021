@@ -147,6 +147,11 @@ Within an instance method or a constructor, this refers to the current object (t
 
 **Exercise**: c8.11.1: The this implicit parameter
 
+**Solution**:
+```java
+this.numDays = numDays;
+```
+
 ### Static Variable / Method
 
 A **static variable** is a varable shared among all class objects. The keyword `static` is used when declaring such a variable. It will be accessed using the class name instead of an object's name.
