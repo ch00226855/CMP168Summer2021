@@ -51,6 +51,17 @@ Java does not allow *multiple inheritance* to avoid inheriting a variable or met
 - UML Diagrams denote interfaces using the keyword interface, inside double angle brackets, above the class name.
 - Classes that implement the interface have a dashed line with an unfilled arrow pointing at the interface.
 
+**Exercise**: p10.4.2: UML interfaces
+
+**Exercise**: Pets that can eat and speak
+![](https://github.com/ch00226855/CMP168Summer2021/raw/main/images/chp10_Interface.png)
+
+1. What happens if the abstract methods are not implemented?
+2. Call `eat()` and `speak()` methods from a dog and a cat.
+3. In the main method of `Tester` class, feed the same food to an array of pets, observe that cats and dogs metabolise differently.
+4. Create another class that is not a pet, but can also eat and speak. 
+5. Create an array of `FoodEater` and call the `toString()` method of all the elements.
+
 
 
 
