@@ -15,7 +15,7 @@ It is a common programming task to sort elements of an array or other data colle
 ## Midterm Exam and Project Unveiling
 
 **Midterm Exam**:
-- Date and Time: **Monday, August 2nd 2:00 - 4:00 PM**
+- Date and Time: **Monday, August 2nd 2:00 - 5:25 PM**
 - Format: submit your code to Zybooks before the deadline
 - Unlimited amount of submissions before 4:00pm.
 - Covered topics: Chapter 8 - Chapter 11 (you should also be familiar with Chapter 1 - 7)
