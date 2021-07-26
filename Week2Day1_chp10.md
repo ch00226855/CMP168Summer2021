@@ -11,6 +11,10 @@ An **abstract class** is a class that guides the design of subclasses but cannot
 - An abstract method is denoted by the keyword `abstract` in front of the method signature. Ex: `abstract double computeArea();`
 - A **concrete class** is a class that is not abstract, and hence can be instantiated.
 
+**Why do we need abstract classes?**
+- Force its subclasses to implement certain behavior.
+- Allow methods to use abstract parameters.
+
 ### Syntax
 
 ![](https://i.stack.imgur.com/GDPOs.png)
@@ -29,6 +33,25 @@ In the `main` method of `Tester` class, do the following:
 5. Iterate through the array and print the content of each element by using the toString() method
 6. Call the play method on each element to ensure it performs the appropriate behavior
 
+**Challenges:**
+1. Modify `Pet`, `Dog` and `Cat` class so that there are counters on how many pets, dogs and cats created.
+2. Define a method `letPetsPlay(Pet[])` that calls the `play()` method of all pets in the array.
+
 ### Interfaces
+
+Java does not allow *multiple inheritance* to avoid inheriting a variable or method from two parent classes, where the method was defined differently. Instead, Java provides **interfaces** as another mechanism for programmers to state that a class adheres to rules defined by the interface.
+
+- An interface can specify a set of abstract methods that do not have a method body.
+- An implementing class must list the interface name after the keyword **implements**.
+- A class can implement multiple interfaces using a comma separated list.
+- An implementing class must override and implement all the abstract methods from the interfaces.
+
+**Exercise**: p10.4.1 Comparison of interfaces and abstract classes
+
+- UML Diagrams denote interfaces using the keyword interface, inside double angle brackets, above the class name.
+- Classes that implement the interface have a dashed line with an unfilled arrow pointing at the interface.
+
+
+
 
 
