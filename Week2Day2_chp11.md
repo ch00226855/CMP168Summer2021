@@ -49,6 +49,7 @@ catch (exceptionType excptObj) {
    // Handle exception, e.g., print message
 }
 ...
+```
 - A `try` block surrounds normal code. It contains one or more `throw` statements.
 - If a `throw` statement is reached, execution jumps immediately to the end of the try block.
 - A `catch` clause immediately follows a `try` block to handle exceptions.
@@ -61,7 +62,7 @@ Java offers several built-in `Throwable` types like `Error` and `Exception`.
 - The `Exception` class has a constructor that can take in a string, as in `throw new Exception("Invalid weight.");`
 - An `Exception` object can return the string using the `getMessage()` method.
 - An `Exception` object has a `printStackTrace()` method to indicate the location of the exception.
-```
+
 **Exercise**: p11.1.3 Exception Basics
 
 **Exercise**: Define class `WeightException` to include string `Invalid weight` in the message by default. Use this exception in the BMI program.
@@ -104,3 +105,5 @@ catch (Throwable thrwObj) {
    // Handle others (e.g., type3)
 }
 ```
+
+A common error is to place a catch block intended to handle exceptions of a base class before catch blocks intended to handle exceptions of a derived class, resulting in a compiler error with a message such as: "exception has already been caught".
