@@ -32,3 +32,75 @@ It is a common programming task to sort elements of an array or other data colle
 
 ## Chapter 11 
 **Error-checking code** is code a programmer writes to detect and handle errors that occur during program execution. An exception is a circumstance that a program was not designed to handle, such as if the user enters a negative height.
+
+- Figure 11.1.1: BMI example without error checking
+- Figure 11.1.2: BMI example with error-checking code but without using exception-handling constructs
+
+**Exception-handing constructs**
+```java
+...
+try {
+   ...   
+   // If error detected
+      throw objectOfExceptionType;
+   ...
+}
+catch (exceptionType excptObj) {
+   // Handle exception, e.g., print message
+}
+...
+- A `try` block surrounds normal code. It contains one or more `throw` statements.
+- If a `throw` statement is reached, execution jumps immediately to the end of the try block.
+- A `catch` clause immediately follows a `try` block to handle exceptions.
+- There can be multiple `catch` blocks to handle different exceptions.
+
+**Example**: Figure 11.1.3 BMI example with error-checking code using exception-handling constructs.
+
+### The Exception Class
+Java offers several built-in `Throwable` types like `Error` and `Exception`. 
+- The `Exception` class has a constructor that can take in a string, as in `throw new Exception("Invalid weight.");`
+- An `Exception` object can return the string using the `getMessage()` method.
+- An `Exception` object has a `printStackTrace()` method to indicate the location of the exception.
+```
+**Exercise**: p11.1.3 Exception Basics
+
+**Exercise**: Define class `WeightException` to include string `Invalid weight` in the message by default. Use this exception in the BMI program.
+
+**Common exception types**: Table 11.1.1
+
+### Exception with Methods
+
+If a method throws an exception, it can choose to handle it itself; alternatively, it can throw it outside so that the exception can be handled depending on where the method is called.
+
+**Example**: BMI example using exception-handling constructs along with methods.
+- If a method adds `throw Exception` on the first line of its definition, it doesn't need to handle the exception within the method.
+- The method that calls an exception-throwing method may handle the exception or throw it even further.
+- A common error is forgetting to enclose code that may throw exceptions with try-catch constructs. It will result in a compiler error.
+
+**Unchecked Exceptions**: Table 11.2.2 These exceptions do not require programmers to handle specifically. They should be avoided from the program.
+
+### Multiple Catch Blocks
+
+Different throws in a try block may throw different exception types. Multiple handlers may exist, each handling a different type. The first matching handler executes; remaining handlers are skipped.
+
+**Syntax**:
+```java
+try {
+   ...
+   throw objOfExcptType1;
+   ...
+   throw objOfExcptType2;
+   ...
+   throw objOfExcptType3;
+   ...
+}
+catch (ExcptType1 excptObj) {
+   // Handle type1
+}
+catch (ExcptType2 excptObj) {
+   // Handle type2
+}
+catch (Throwable thrwObj) {
+   // Handle others (e.g., type3)
+}
+```
