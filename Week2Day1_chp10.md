@@ -17,4 +17,18 @@ An **abstract class** is a class that guides the design of subclasses but cannot
 
 UML uses *italics* for abstract classes and methods. (p10.3.3, p10.3.4)
 
-Start
+**Example**: Pets
+![](https://github.com/ch00226855/CMP168Summer2021/raw/main/images/chp10_AbstractClass.png)
+
+In the `main` method of `Tester` class, do the following:
+
+1. Create 2 instances of the Dog using the overloaded constructor
+2. Create 2 instances of the Cat using the overloaded constructor
+3. Try to create an instance of a Pet to see that it CANNOT be instantiated. Comment it out and move on to the next step
+4. Create an array of type Pet and populate it with references to all the Dog and Cat instances created earlier
+5. Iterate through the array and print the content of each element by using the toString() method
+6. Call the play method on each element to ensure it performs the appropriate behavior
+
+### Interfaces
+
+
