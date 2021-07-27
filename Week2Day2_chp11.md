@@ -55,13 +55,20 @@ catch (exceptionType excptObj) {
 - A `catch` clause immediately follows a `try` block to handle exceptions.
 - There can be multiple `catch` blocks to handle different exceptions.
 
-**Example**: Figure 11.1.3 BMI example with error-checking code using exception-handling constructs.
-
 ### The Exception Class
 Java offers several built-in `Throwable` types like `Error` and `Exception`. 
+- An `Exception` object is throwed when an event (such as `IndexOutOfBoundsException`) occurs that disrupts the normal flow of instructions.
 - The `Exception` class has a constructor that can take in a string, as in `throw new Exception("Invalid weight.");`
 - An `Exception` object can return the string using the `getMessage()` method.
 - An `Exception` object has a `printStackTrace()` method to indicate the location of the exception.
+- `Error` objects are more severe and should be avoided. Example: `OutOfMemoryError`, `StackOverflowError`.
+
+**Why use `Exceptions`?**
+- Separate exception handling code from ordinary code.
+- Provide flexibility on how exceptions can be handled.
+- Group and differentiate exceptions based on their types.
+
+**Example**: Figure 11.1.3 BMI example with error-checking code using exception-handling constructs.
 
 **Exercise**: p11.1.3 Exception Basics
 
@@ -107,3 +114,18 @@ catch (Throwable thrwObj) {
 ```
 
 A common error is to place a catch block intended to handle exceptions of a base class before catch blocks intended to handle exceptions of a derived class, resulting in a compiler error with a message such as: "exception has already been caught".
+
+### The `finally` Block
+
+The `finally` block can be provided after the last `catch` block.
+```java
+try {
+   // risky code
+} catch (Exception e) {
+   // handle the exception
+} finally {
+   // clean up code such as closing data streams, free memory spaces
+}
+```
+- The finally block alwasy executes regardless of an exception being thrown or not.
+- It is used to make sure the program still does some essential operations even if something unexpected happens.
