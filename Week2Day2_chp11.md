@@ -4,13 +4,32 @@
 ### The Comparable Interface
 It is a common programming task to sort elements of an array or other data collections. In order for the built-in `sort()` method to work, objects created from a user-defined class must implement the `Comparible` interface, which declares the `compareTo()` method. Here we study how to implement `Comparible`, and in Chapter 13 we will see how a Java *arrayList* can sort comparible objects.
 
+**Syntax**:
+```java
+public class ClassName implements Comparable<Type> {
+   ...
+   @Override
+   public int compareTo(Type obj) {
+   
+      if (...) {
+         return 1;
+      } else if (...) {
+         return 0;
+      } else {
+         return -1;
+      }
+   }
+}
+```
+
 **Example**: Figure 10.5.2 Making `EmployeeData` comparible.
 
-**Example**: Create class `Course` including `courseDept` and `courseNum`. Implement interface `Comparible` so that its `compareTo()` method first compare `courseDept`, and then compare `courseNum`.
-
-**Polymorphism**: Create class `Person` and derived class `Employee`. `Person` implements `Comparible` such that objects are compared by `birthYear`. `Empolyee` also implements `Comparible` so that objects are compared by `employeeID`. Create a `Person` object and an `Employee` object.
-- Can they be compared?
-- Which implementation is used when comparing them?
+**Example**: 
+- Create class `Course` including `courseDept` and `courseNum`. Implement interface `Comparible` so that its `compareTo()` method first compare `courseDept`, and then compare `courseNum`.
+- Create class `Person` and derived class `Employee`. `Person` implements `Comparible` such that objects are compared by `birthYear`. `Empolyee` also implements `Comparible` so that employees are compared by `employeeID`. 
+- Create a `Person` object and an `Employee` object.
+   - Can they be compared?
+   - Which implementation is used when comparing them?
 
 ## Midterm Exam and Project Unveiling
 
