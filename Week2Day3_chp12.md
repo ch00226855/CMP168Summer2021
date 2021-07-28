@@ -74,19 +74,6 @@ A file input/output stream requires exception handling to ensure invalid or inte
 - A `FileIOException` represents a general types of exception that occurs during interactions with files.
 
 **Safely create a new file**
-PrintWriter outStream = null;	//notice this is not inside the try block
-```java
-try {
-	outStream = new PrintWriter(fileName);	//create and connect to a new empty file
-} catch (FileNotFoundException e) {
-	System.err.println("Could not create the file " + fileName);
-	e.printStackTrace();
-} finally {
-	if(outStream != null){
-		outStream.close();	//close the stream and release resources
-	}
-}
-```
 
 **Exercise:** Safely read from a file and display the content
 
@@ -105,6 +92,7 @@ PrintWriter pw = new PrintWriter("myFile.txt");
 PrintWriter pw = new PrintWriter(new File("myFile.txt"));
 PrintWriter pw = new PrintWriter(new FileOutputStream("myFile.txt"));
 ```
+
 **Useful methods:**
 - `append(char c)`
 - `print()`, `println()`, `printf()`
