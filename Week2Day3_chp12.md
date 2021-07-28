@@ -180,5 +180,11 @@ try {
 }
 ```
 - Delete a file
+```java
+File file = new File("data/records_copy.txt");
+System.out.println("Does file exist? " + file.exists());
+boolean results = file.delete();
+System.out.println("Has the file been deleted? " + results);
+```
 
 **Exercise**: Save and reconstruct a database.
