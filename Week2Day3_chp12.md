@@ -66,6 +66,30 @@ The `File` class provides an abstract representation of a file or a directory. I
 - `getAbsolutePath()`
 - `setReadOnly()`
 
+## Exception Handling in File I/O
+A file input/output stream requires exception handling to ensure invalid or interrupted file operation exceptions are appropriately caught and handled. 
+
+- A `FileNotFoundException` will be thrown if the string pathname is incorrect
+- An `AccessDeniedException` will be thrown if the permissions prohibit the read/write/execute action attempted
+- A `FileIOException` represents a general types of exception that occurs during interactions with files.
+
+**Safely create a new file**
+PrintWriter outStream = null;	//notice this is not inside the try block
+```java
+try {
+	outStream = new PrintWriter(fileName);	//create and connect to a new empty file
+} catch (FileNotFoundException e) {
+	System.err.println("Could not create the file " + fileName);
+	e.printStackTrace();
+} finally {
+	if(outStream != null){
+		outStream.close();	//close the stream and release resources
+	}
+}
+```
+
+**Exercise:** Safely read from a file and display the content
+
 ## Write to Files
 Java provides various way to represent outputs of a program:
 - `OutputStream`: represents the output of the program as a byte stream
@@ -90,5 +114,25 @@ PrintWriter pw = new PrintWriter(new FileOutputStream("myFile.txt"));
 
 **Example**: p12.2.2, p12.2.3 Writing to an output text file
 
-**Exercise**: Save and reconstruct a database.
+**Safely write to a new file**
+```java
+PrintWriter outStream = null; // notice this is not inside the try block
+try {
+	outStream = new PrintWriter(fileName); // create and connect to a new empty file
+	outStream.println(text); // write text to the file
+} catch (FileNotFoundException e) {
+	System.err.println("Could not create the file " + fileName);
+	e.printStackTrace();
+} finally {
+	if(outStream != null) {
+	outStream.close(); // close the stream and release resources
+	}
+}
+```
 
+**Exercises:**
+- Safely appending to an existing file
+- Copy a file (read from `file1` and write the content to `file2`)
+- Delete a file
+
+**Exercise**: Save and reconstruct a database.
