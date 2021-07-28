@@ -73,9 +73,26 @@ A file input/output stream requires exception handling to ensure invalid or inte
 - An `AccessDeniedException` will be thrown if the permissions prohibit the read/write/execute action attempted
 - A `FileIOException` represents a general types of exception that occurs during interactions with files.
 
-**Safely create a new file**
-
 **Exercise:** Safely read from a file and display the content
+```java
+try {	file = new FileInputStream("C:/Users/DancyZou/Downloads/temp.txt");
+	scnr = new Scanner(file);
+
+	// load until the end of a file
+	while (scnr.hasNext()) {
+		System.out.println(scnr.nextLine());
+	}
+} catch (IOException e) {
+	System.err.println(e.getMessage());
+	e.printStackTrace();
+} finally {
+	try {
+		file.close();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}	
+```
 
 ## Write to Files
 Java provides various way to represent outputs of a program:
