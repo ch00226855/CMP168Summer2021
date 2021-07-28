@@ -36,7 +36,7 @@ A program sometimes need to read data from files rather than from a user typing 
 **Example**: p12.1.1, p12.1.2 Read a file using `Scanner` and `FileInputStream`.
 - Import `java.util.Scanner`, `java.io.FileInputStream`, and `java.io.IOException`.
 - Create a `FileInputStream` object representing a computer file.
-- Create a `Scanner` object listening to the file input stream.
+- Create a `Scanner` object and connect it to the file input stream.
 - Use methods like `nextInt()`, `nextDouble()`, or `nextLine()` to read from the file.
 - Close the file input stream afterwards (otherwise the file cannot be accessed by another program).
 - Close the scanner to release memory space.
@@ -52,3 +52,43 @@ The `Scanner` class offers `hasNext()` method to detect whether the scanner has 
 
 **Class `FileReader`**
 The `FileReader` class provides a convenient way to read character files. It provides a `read()` method that reads one character at a time. If there is no more characters, the method will return -1.
+
+**Exercise**: Read a TXT file using `Scanner` and `FileReader`.
+
+**Class `File`**
+The `File` class provides an abstract representation of a file or a directory. It has many useful methods including:
+- `exists()`: tests whether the file or directory exists.
+- `canRead()`, `canWrite()`
+- `isFile()`, `isDirectory()`
+- `list()`: returns a list of files and subdirectories in a directory
+- `length()`
+- `delete()`
+- `getAbsolutePath()`
+- `setReadOnly()`
+
+## Write to Files
+Java provides various way to represent outputs of a program:
+- `OutputStream`: represents the output of the program as a byte stream
+- `PrintStream`: subclass of `OutputStream` with additional print methods
+- `FileOutputStream`: an output stream writing to a file
+- `File`
+
+We can write oiutput to a file via the `PrintWriter` class.
+
+**Syntax**
+```java
+PrintWriter pw = new PrintWriter("myFile.txt");
+PrintWriter pw = new PrintWriter(new File("myFile.txt"));
+PrintWriter pw = new PrintWriter(new FileOutputStream("myFile.txt"));
+```
+**Useful methods:**
+- `append(char c)`
+- `print()`, `println()`, `printf()`
+- `write(String s)`
+- `flush()`: flush the stream and write to file immediately
+- `close()`
+
+**Example**: p12.2.2, p12.2.3 Writing to an output text file
+
+**Exercise**: Save and reconstruct a database.
+
