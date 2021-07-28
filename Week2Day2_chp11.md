@@ -6,7 +6,7 @@
 **Midterm Exam**:
 - Date and Time: **Monday, August 2nd 2:00 - 5:25 PM**
 - Format: submit your code to Zybooks before the deadline
-- Unlimited amount of submissions before 4:00pm.
+- Unlimited amount of submissions
 - Covered topics: Chapter 8 - Chapter 11 (you should also be familiar with Chapter 1 - 7)
 - You can ask me questions during the exam on Slack.
 
