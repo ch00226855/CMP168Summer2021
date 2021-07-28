@@ -150,6 +150,35 @@ try {
 }
 ```
 - Copy a file (read from `file1` and write the content to `file2`)
+
+```java
+File file1 = new File("data/recordss.txt");
+File file2 = new File("data/records_copy.txt");
+Scanner scnr = null;
+PrintWriter pw = null;
+
+try {
+	scnr = new Scanner(file1);
+	pw = new PrintWriter(file2);
+
+	while(scnr.hasNext()) {
+		// read and write one line
+		String line = scnr.nextLine();
+		pw.println(line);
+	} 
+	pw.flush();
+} catch (IOException e) {
+	System.err.println(e.getMessage());
+	e.printStackTrace();
+} finally {
+	if (scnr != null) {
+		scnr.close();
+	}
+	if (pw != null) {
+		pw.close();
+	}
+}
+```
 - Delete a file
 
 **Exercise**: Save and reconstruct a database.
