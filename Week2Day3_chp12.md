@@ -137,6 +137,18 @@ try {
 
 **Exercises:**
 - Safely appending to an existing file
+```java
+try {
+	pw = new PrintWriter(new FileOutputStream("data/records.txt", true));
+	pw.println("I am appending to this file!");
+} catch (IOException e) {
+	System.out.println(e.getMessage());
+} finally {
+	if (pw != null) {
+		pw.close();
+	}
+}
+```
 - Copy a file (read from `file1` and write the content to `file2`)
 - Delete a file
 
