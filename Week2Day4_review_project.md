@@ -83,7 +83,7 @@ Create a class ShowDog that extends Dog
 
 - \+ ShowDog() 		//default ShowDog name is “Show Dog Doe” //remember to always call the parent constructor 
 - \+ ShowDog(String name) 	
-- \+ ShowDog(String name, double wt,double ht, boolean isVac, int age, String bestFeature) 	
+- \+ ShowDog(String name, double wt,double ht, boolean isVac, int age, int numTrophies) 	
 
 - \+ getNumTrophies() : int
 - \+ setNumTrophies(int numTrophies) : void
@@ -91,7 +91,7 @@ Create a class ShowDog that extends Dog
 
 - \- isValid(int val) : boolean	//values >=0 are valid
 
-- \+ toString() : String		// super.toString() + "\nShowDog: numTrophies=" + numTrophies + ", bestFeature=" + bestFeature"
+- \+ toString() : String		// super.toString() + "\nShowDog: numTrophies=" + numTrophies
 - \+ equals(Object o) : boolean
 
 ### Exercise 6: Test the `ShowDog` class
