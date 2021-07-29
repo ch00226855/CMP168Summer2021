@@ -120,7 +120,7 @@ In the main method of the Tester class do the following:
 - \+ setBirthYear(int year): void
 - \+ *work()*: void
 
-Create a subclass `DogTrainier` that extends `Person`
+Create a subclass `DogTrainer` that extends `Person`
 - Add an array `dogAry`
 - Add methods `addDog(Dog)` and `removeDog(Dog)
 - Implement `work()` method so that it prints "I am training xxx" for each dog in `dogAry`
