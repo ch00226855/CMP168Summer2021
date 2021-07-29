@@ -37,7 +37,7 @@ In the main method of the Tester class, do the following:
 2. Set the name of each individual Dog object by using the mutator methods.
 3. Set the weight and height on 2 of the Dog instances to values you deem appropriate.
 4. Use the accessor/getter methods to print the details from each of the Dog instances.
-5 Set values on the other attributes for the Dog instances as well if you like.
+5. Set values on the other attributes for the Dog instances as well if you like.
 
 Use if statements to test your methods and print “FAILED” or “SUCCESS” depending on whether the values set to the object’s attributes, match the values returned when using the accessor methods.
 
@@ -49,7 +49,6 @@ Add to the class Dog from Exercise \#1
 
 - \+ Dog( String name ) 
 - \+ Dog( String name, double weight, double height ) 
-- \+ Dog( String name, boolean isVaccinated, int age ) 
 - \+ Dog( String name, double weight, double height, boolean isVaccinated, int age ) 
 
 - \+ toString() : String
@@ -67,34 +66,30 @@ Use the helper method isValid(int x) to prevent invalid values from being set on
 Add to the class `Dog`:
 
 - \- **numDogs** : int       0 		// static controlled variable initial value = 0
-- \- dogNumber: int		// controlled variable dependent upon numDogs
+- \- dogID: int		// controlled variable dependent upon numDogs
 
 
 - \+ **getNumDogs()** : int		// static method
-- \+ getDogNumber() : int
+- \+ getDogID() : int
 
-Update the default constructor for the Dog class, so that it increments the numDogs then assigns the value to dogNumber
+Update the default constructor for the Dog class, so that it increments the `numDogs` then assigns the value to `dogID`
 
-Do not create mutator methods for either numDogs or dogNumber so that they cannot be modified outside the class.
+Do not create mutator methods for either `numDogs` or `dogID` so that they cannot be modified outside the class.
 
 ### Exercise 5: Create subclss `ShowDog`
 
 Create a class ShowDog that extends Dog
 - \- numTrophies : int		//default value is 0
-- \- bestFeature : String		//default value is “unknown”
 
 - \+ ShowDog() 		//default ShowDog name is “Show Dog Doe” //remember to always call the parent constructor 
 - \+ ShowDog(String name) 	
-- \+ ShowDog(int numTrophies, String bestFeature) 	//
-- \+ ShowDog(String name, double wt,double ht, boolean isVac, int age, int numTrophies, String bestFeature) 	
+- \+ ShowDog(String name, double wt,double ht, boolean isVac, int age, String bestFeature) 	
 
 - \+ getNumTrophies() : int
-- \+ getBestFeature() : String
 - \+ setNumTrophies(int numTrophies) : void
-- \+ setBestFeature(String bestFeature) : void
 - \+ addTrophy() : void		//increment numTrophies by 1
 
-- \+ isValid(int val) : boolean	//values >=0 are valid
+- \- isValid(int val) : boolean	//values >=0 are valid
 
 - \+ toString() : String		// super.toString() + "\nShowDog: numTrophies=" + numTrophies + ", bestFeature=" + bestFeature"
 - \+ equals(Object o) : boolean
@@ -105,17 +100,49 @@ Create a `ShowDogTester` class with a main method so that it can be run.
 
 In the main method of the Tester class do the following:
 
-- Create 3 separate instances of the `ShowDog` using the default constructor.
+- Create 3 separate instances of the `ShowDog` using the each of the three constructors.
 - Set the name of each individual ShowDog object by using the mutator methods from the parent class.
 - Set the weight and height on 2 of the ShowDog instances to values you deem appropriate.
 - Set the numTrophies and bestFeature on 2 of the ShowDog instances to values you deem appropriate.
-- Create 3 separate instances of the ShowDog using each of the 3 overloaded constructors.
-- Create an array of ShowDog objects and initialize it to contain all the ShowDogs
+- Create an array of ShowDog objects and initialize it to contain all the ShowDogs.
 - Set values on the attributes for the ShowDog to valid or invalid values to test the mutator methods.
 - Iterate through the array and use the `toString` methods to print the details from each of the ShowDog instances.
 
 ### Exericse 7: Abstract class `Person`
 
+- \- name: String
+- \- birthYear: int
+- \+ Person()			// name = "", birthYear = 0
+- \+ Person(String name, int birthYear)
+- \+ getName():String
+- \+ getBirthYear():int
+- \+ setName(String name): void
+- \+ setBirthYear(int year): void
+- \+ *work()*: void
 
+Create a subclass `DogTrainier` that extends `Person`
+- Add an array `dogAry`
+- Add methods `addDog(Dog)` and `removeDog(Dog)
+- Implement `work()` method so that it prints "I am training xxx" for each dog in `dogAry`
+- \+ equals(Object obj): 
+- \+ toString(): String	
+- \+ compareTo(Person p): int	//use the Comparable interface specification. Sort by birthYear.
+
+### Exercise 8: Create `DogInfoIncompleteException`
+
+Create `DogInfoIncompleteException` that extends `Exception`:
+- Implement its default constructor
+- Implement overloaded constructor `DogInfoIncompleteException(String)`
+
+### Exercise 9: Exception handling
+Modify the `addDog()` method so that it will throw `DogInfoIncompleteException` if the dog has default value on `name`, `weight`, `height`, `isVaccinated`, or `ageInDogYears`.
+
+### Exercise 10: Test `DogTrainer` class
+
+- Create 2 `Dog` instances with complete information.
+- Create another `Dog` instance with incomplete information.
+- Create a `DogTrainer`.
+- Add all three `Dog` objects. Determine how to handle exceptions
+- Call the `work()` method and check the output.
 
 
