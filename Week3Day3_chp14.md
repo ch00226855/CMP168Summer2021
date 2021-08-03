@@ -66,6 +66,7 @@ public class **** {
       ...
    }
 }
+```
 
 Another popular class for representing a graphical component is `javax.swing.JPanel`. Its `paint()` method is used to describe what to draw.
 
