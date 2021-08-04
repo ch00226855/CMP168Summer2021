@@ -98,4 +98,36 @@ A Java graphical application is created based on a **model-view-controller (MVC)
 - **View**: describes the presentation of the application.
 - **Controller**: handles user interaction.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1200px-MVC-Process.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1200px-MVC-Process.svg.png" width="600">
+
+## Built-In GUI Components
+
+The `javax.swing` package provides a lot of built-in graphical objects for programmers to use.
+
+**JLabel**: a display area for a short text string or an image
+- Constructor: `JLable(String)`
+
+**JTextField**: a single line of user-interactible text
+- Constructor:
+   - `JTextField(int)`: an empty text field with specified length
+   - `JTextField(String)`: an empty text field with specified text
+- Methods:
+   - `setText()`
+   - `setEditable()`
+   - `setFont()`
+   - `getText()`
+
+**JButton**: a clickable button
+- Constructor: `JButton(String)`
+- Methods: `addActionListener(ActionListener)`
+
+In order to interact with `JButton`, the container class must implement interface `ActionListener` and implement its `actionPerformed(ActionEvent)` method.
+
+**GridBagLayout**: a layout manager that decribes the location of every graphical object
+- Syntax: `(JFrame).setLayout(new GridBagLayout())`
+
+**GridBagConstraints**: describes the properties of every graphical object
+- Syntax: `(JFrame).add(JComponent, GridBagConstraints)`
+- Attributes: `gridx`, `gridy`, `insets`, `fill(HORIZONTAL, BOTH)`, `gridWidth`, `gridHeight`, `anchor(LINE_END)`
+
+**Exercise**: Build a salary calculator with GUI that displays yearly salary when user enters hourly wage.
