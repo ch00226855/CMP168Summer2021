@@ -91,3 +91,11 @@ Classes `java.awt.Graphics` and `java.awt.Graphics2D` act as paint brushes. `Gra
 - Font styles: `Font.PLAIN`, `Font.ITALIC`, `Font.BOLD`, `Font.ITALIC + Font.BOLD`
 
 **Example**: Create a 3-by-3 Tic Tac Toe board with two player names.
+
+## The MVC Framework
+A Java graphical application is created based on a **model-view-controller (MVC)** framework:
+- **Model**: stores data and its related logic.
+- **View**: describes the presentation of the application.
+- **Controller**: handles user interaction.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1200px-MVC-Process.svg.png)
