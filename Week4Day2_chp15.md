@@ -15,7 +15,7 @@ A program's memory usage typically includes four different regions:
   - The memory is allocated automatically for these variables.
 - **The memory heap**: The region where the **new** operator allocates memory for objects.
 
-<img >
+<img src="https://github.com/ch00226855/CMP168Summer2021/raw/main/images/chp15_01_stackheap.png" width="600">
 
 Figure 15.1.1: Use of the four memory regions.
 
