@@ -77,9 +77,9 @@ Consider writing a method that searches for the index of a given number from a a
 - Write the search method with a loop
 - Write the search method with recursion
 - Performance analysis: If there are n numbers in the array,
-  - What is the minimum number of comparisons needed to find the index? The answer is called the **best-case complexity**.
-  - What is the maximum number of comparisons needed to find the index? The answer is called the **worst-case complexity**.
-  - What is the average number of comparisons needed to find the index? The answer is called the **average-case complexity**.
+  - What is the minimum number of comparisons needed to find the index? (1, because the first number could be a match) The answer is called the **best-case complexity**.
+  - What is the maximum number of comparisons needed to find the index? (n, because the method has to go through the entire array) The answer is called the **worst-case complexity**.
+  - What is the average number of comparisons needed to find the index? (n/2)The answer is called the **average-case complexity**.
 
 Now consider that the array is sorted. Can we do better?
 
