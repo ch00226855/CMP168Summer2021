@@ -102,9 +102,10 @@ A recursive method is a natural match for the recursive binary search algorithm.
 **Exercise**: Implement the binary search algorithm for numbers / strings.
 
 **Performance Analysis of Binary Search**
-- What is its best-case complexity?
-- What is its worst-case complexity?
-- What is its average-case complexity?
+Suppose the length of the array is n.
+- What is its best-case complexity? O(1) comparison.
+- What is its worst-case complexity? O(log_2(n)). 1024 = 2 ^ 10. log_2(1024) = 10
+- What is its average-case complexity? O(log(n)).
 
 ## O Notation
 - The **Big O** notation is a mathematical way of describing how a function (running time of an algorithm) generally behaves in relation to the input size. 
