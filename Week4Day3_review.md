@@ -34,3 +34,9 @@ Merge sort is a sorting algorithm that has O(n log n) complexity. It is widely u
 - Two-dimensional arrays: array declaration, passing values to array, going through array elements with a nested loop.
 - GUI
 - Recursion: typical recursive methods, binary search methods.
+
+**Exercises**:
+- Section 8.18: Salary calculation with classes
+- Section 9.8: Employees and overriding class methods
+- Section 10.6: Employees and instantiating from an abstract class
+- Section 11.4: Generate number format exception
